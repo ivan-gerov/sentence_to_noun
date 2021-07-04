@@ -103,3 +103,5 @@ target/
 # Hypothesis DB.
 .hypothesis*
 
+# NLTK data
+nltk_data/
