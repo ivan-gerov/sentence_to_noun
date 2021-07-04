@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/parse_sentence" method="post">
+        <h3>Please enter a valid sentence containing nouns! :)</h3>
+        <input type="text" name="sentence">
+        <input type="submit" value="Send">
+    </form>
+    <br>
+
+    <pre id="sentence_parse_result"></pre>
+
+    <script>
+        let sentence_parse_html = "{{data.response|safe}}"
+        document.getElementById("sentence_parse_result").innerHTML = sentence_parse_html
+    </script>
+</body>
+</html>
